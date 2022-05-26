@@ -333,7 +333,9 @@ a {
   display: block;
   align-self: center;
   justify-self: center;
-  left: 50%; }
+  left: 50%; 
+  transform: translateX(-50%);
+}
 
 .YTPOverlay {
   position: relative; }
