@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=PT+Sans:wght@700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="libs/aos/aos.css">
+  <script src="https://kit.fontawesome.com/1774739131.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="font/fontello-social/css/fontello.css">
+  <link rel="stylesheet" href="font/fontello/css/fontello.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="libs/YTPlayer/dist/css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+
+  <title>Photo Gallery</title>
+  <style>
+    /* Colors */
+    :root {
+      /* Font */
+      --mainColor: #111111;
+      --latestTitle: #616157;
+      --latestDescr: #b3b3b3;
+      --aboutTitle: #A2A6A1;
+      --aboutusTitle: #CCD4C4;
+
+      /* Color Elements */
+      --secondaryColor: #fff;
+      --lightGrey: #d9d9d9;
+      --lightBrown: #A68058;
+      --lightBrownLinks: #A68058;
+      --lightBrownHeader: #DEB887;
+      --lightBrownHeaderNoscroll: rgb(222, 184, 135);
+      --latestBorder: #C0C0C0;
+      --aboutBGcolor: linear-gradient(#332f29, #2b3329);
+      --informationSquareColor: #dfdfd6;
+      --aboutusBGColor: #959e8c;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header--body">
+          <a href="#s-hero" class="header--logo logo">
+            <!--START BLOCK HeaderLogo-->
+            <img src="img/logo.svg" alt="{HeaderName-Seitename}" class="logo--icon">
+            <!--END BLOCK HeaderLogo-->
+
+            <!--START BLOCK HeaderName-->
+            <div class="logo--text">Gallery</div>
+            <!--END BLOCK HeaderName-->
+          </a>
+          <ul class="header--nav nav">
+            <li class="nav--list">
+              <a href="#s-hero" class="nav--link">Home</a>
+            </li>
+
+            <!--START BLOCK About-->
+            <li class="nav--list">
+              <a href="#s-about" class="nav--link">Gallery</a>
+            </li>
+            <!-- END BLOCK About-->
+
+            <!--START BLOCK Tour-->
+            <li class="nav--list">
+              <a href="#s-tour" class="nav--link">Tours</a>
+            </li>
+            <!-- END BLOCK Tour-->
+
+            <!--START BLOCK Information-->
+            <li class="nav--list">
+              <a href="#s-information" class="nav--link">Info</a>
+            </li>
+            <!-- END BLOCK Information-->
+
+            <!--START BLOCK Aboutus-->
+            <li class="nav--list">
+              <a href="#s-aboutus" class="nav--link">About</a>
+            </li>
+            <!-- END BLOCK Aboutus-->
+          </ul>
+          <div class="burger-menu">
+            <nav role='navigation'>
+              <div id="menuToggle">
+                <input id="showBtn" type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu" class="nav-box">
+                  <a class="nav-box--link" href="#s-hero">Home</a>
+
+                  <!--START BLOCK About-->
+                  <a class="nav-box--link" href="#s-about">Gallery</a>
+                  <!-- END BLOCK About-->
+
+                  <!--START BLOCK Tour-->
+                  <a class="nav-box--link" href="#s-tour">Tours</a>
+                  <!-- END BLOCK Tour-->
+
+                  <!--START BLOCK Information-->
+                  <a class="nav-box--link" href="#s-information">Info</a>
+                  <!-- END BLOCK Information-->
+
+                  <!--START BLOCK Aboutus-->
+                  <a class="nav-box--link" href="#s-aboutus">About</a>
+                  <!-- END BLOCK Aboutus-->
+                </ul>
+              </div>
+              <div class="backdrop"></div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- <section class="hero" id="s-hero"
+        style="background: url(img/hero-bg.jpg) no-repeat center /cover rgba(0, 0, 0, 0.3)">
+        <div class="container">
+          <div class="hero__body">
+            <div class="hero__content">
+              <h1 class="hero__title">Mountain</h1>
+              <div class="hero__descr">Go where you feel most alive</div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <section class="hero" id="s-hero">
+        <div id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=3PZ65s2qLTE&t=5s&ab_channel=ScenicRelaxation',containment:'.hero',
+          autoPlay:true, mute:true, startAt:19, stopAt: 34, ratio: 'auto', anchor: 'center, center', showControls:false,
+          stopMovieOnBlur:false, opacity:1}">
+        </div>
+        <img class="load" src="img/load.gif" alt="hero section load">
+        <div class="container">
+          <div class="hero__body">
+            <div class="hero__content">
+              <h1 class="hero__title" data-aos="zoom-in" data-aos-delay="100">Mountain</h1>
+              <div class="hero__descr" data-aos="zoom-in" data-aos-delay="200">Go where you feel most alive</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="latest" id="s-latests">
+        <div class="container">
+          <div class="latest__body">
+            <h2 class="latest__title" data-aos="fade-up" data-aos-delay="100">LATEST TRAVEL NEWS</h2>
+            <div class="latest__content">
+              <div class="latest__column lc" data-aos="fade-left" data-aos-delay="300">
+                <div class="lc__body">
+                  <div class="lc__image">
+                    <img src="img/latest-img1.jpg" alt="latest section" data-fancybox="gallery-single">
+                  </div>
+                  <div class="lc__descr" data-aos="fade-up" data-aos-delay="300">Fri Jun 19 2020</div>
+                  <h3 class="lc__title" data-aos="fade-up" data-aos-delay="400">Post 1 Headline</h3>
+                </div>
+              </div>
+              <div class="latest__column lc" data-aos="fade-left" data-aos-delay="500">
+                <div class="lc__body">
+                  <div class="lc__image">
+                    <img src="img/latest-img2.jpg" alt="latest section" data-fancybox="gallery-single">
+                  </div>
+                  <div class="lc__descr" data-aos="fade-up" data-aos-delay="500">Fri Jun 19 2020</div>
+                  <h3 class="lc__title" data-aos="fade-up" data-aos-delay="600">Post 2 Headline</h3>
+                </div>
+              </div>
+              <div class="latest__column lc" data-aos="fade-left" data-aos-delay="700">
+                <div class="lc__body">
+                  <div class="lc__image">
+                    <img src="img/latest-img3.jpg" alt="latest section" data-fancybox="gallery-single">
+                  </div>
+                  <div class="lc__descr" data-aos="fade-up" data-aos-delay="700">Fri Jun 19 2020</div>
+                  <h3 class="lc__title" data-aos="fade-up" data-aos-delay="800">Post 3 Headline</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="s-about">
+        <div class="container">
+          <div class="about__body about-body">
+            <div class="about-body__column about-body__column-left abcl">
+              <div class="abcl__image abcl__image-1" data-aos="zoom-in" data-aos-delay="500">
+                <img src="img/about-img1.jpg" alt="about section" data-fancybox="gallery-group1">
+              </div>
+              <div class="abcl__image abcl__image-2" data-aos="fade-right" data-aos-delay="1100">
+                <img src="img/about-img3.jpg" alt="about section" data-fancybox="gallery-group1">
+              </div>
+            </div>
+            <div class="about-body__column about-body__column-right abcr">
+              <div class="abcr__text-content">
+                <h2 class="abcr__title" data-aos="fade-left" data-aos-delay="100">PHOTO GALLERY</h2>
+                <div class="abcr__text" data-aos="fade-left" data-aos-delay="200">
+                  There is one thing the photograph must contain, the humanity of the moment. Taking an image, freezing
+                  a
+                  moment, reveals how rich reality truly is.
+                </div>
+              </div>
+              <div class="abcr__image abcr__image-1" data-aos="fade-left" data-aos-delay="800">
+                <img src="img/about-img2.jpg" alt="about section" data-fancybox="gallery-group1">
+              </div>
+              <div class="abcr__image-text-content itc" data-aos="fade-up" data-aos-delay="1400">
+                <div class="abcr__image abcr__image-2">
+                  <img src="img/about-img4.jpg" alt="about section" data-fancybox="gallery-group1">
+                </div>
+                <div class="itc__text-content">
+                  <h4 class="itc__title">About Us</h4>
+                  <ul class="itc__social">
+                    <li>
+                      <a href="#" class="itc__social-twitter">
+                        <i class="icon-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="itc__social-facebook">
+                        <i class="icon-facebook"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="itc__social-instagram">
+                        <i class="icon-instagramm"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="itc__social-linkedin">
+                        <i class="icon-linkedin"></i>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="itc__text">
+                    When images become inadequate, I shall be content with silence
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tour" id="s-tour">
+        <div class="container tour__container">
+          <div class="tour__background-square"></div>
+          <div class="tour__body tour-body">
+            <div class="tour-body__column tour-body__column-left tbcl" data-aos="fade-up" data-aos-delay="100">
+              <div class="tbcl__img">
+                <img src="img/tour-img1.jpg" alt="tour section" data-fancybox="gallery-group2">
+              </div>
+              <div class="tbcl__text">
+                Our all inclusive tours are a life changing experience, filled with culture, cuisine, incredible
+                photographs and unforgettable memories. We think you’ll enjoy them.
+                <br>
+                <br>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse aperiam cupiditate, enim quo porro omnis
+                repellendus atque veniam itaque voluptatibus!
+              </div>
+            </div>
+            <div class="tour-body__column tour-body__column-right tbcr" data-aos="fade-down" data-aos-delay="1000">
+              <h2 class="tbcr__title">
+                PHOTO TOURS
+              </h2>
+              <div class="tbcr__img">
+                <img src="img/tour-img2.jpg" alt="tour section" data-fancybox="gallery-group2">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="interesting" id="s-interesting">
+        <div class="container">
+          <div class="interesting__body ib">
+            <div class="ib__column ib-column" data-aos="fade-up" data-aos-delay="100">
+              <div class="ib-column__image ib-column__image-1">
+                <img src="img/interesting-img1.jpeg" alt="interesting section" data-fancybox="gallery-group3">
+              </div>
+              <div class="ib-column__text-content ibctc">
+                <h3 class="ibctc__title">TRAVEL TO EAST</h3>
+                <div class="ibctc__text">
+                  Venice Italy Travel is a very innovative and creative travel agency founded by a group of skilled and
+                  motivated professionals with experience of more than twenty years in tourism.
+                </div>
+              </div>
+            </div>
+            <div class="ib__column ib-column" data-aos="fade-down" data-aos-delay="1000">
+              <div class="ib-column__image ib-column__image-2">
+                <img src="img/interesting-img2.jpeg" alt="interesting section" data-fancybox="gallery-group3">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="information" id="s-information">
+        <div class="container">
+          <div class="information__body">
+            <div class="information__bg-square"></div>
+            <div class="information__content ic">
+              <div class="ic__image" data-aos="fade-up" data-aos-delay="400">
+                <img src="img/information-img.jpg" alt="information section">
+              </div>
+              <div class="ic__image-bg"></div>
+              <div class="ic__text-content ictc" data-aos="fade-down" data-aos-delay="100">
+                <h2 class="ictc__title">Master Photo Tour</h2>
+                <div class="ictc__text">
+                  Walk with a Photo Master. Explore the world with our master photographers and learn to look at things
+                  with a photographic eye. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo
+                  sagittis suscipit ultrices.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="aboutus" id="s-aboutus">
+        <div class="aboutus__body aboutus-body">
+          <div class="aboutus-body__column aboutus-body__column-left abcl">
+            <img src="img/about-us-img.jpeg" alt="aboutus section" data-fancybox="gallery-single">
+          </div>
+          <div class="aboutus-body__column aboutus-body__column-right abbcr">
+            <div class="abbcr__descr">ABOUT US</div>
+            <h3 class="abbcr__title">
+              ADVENTURE TRAVEL COMPANY & SMALL GROUP TOURS
+            </h3>
+            <div class="abbcr__text">
+              Hands down the most special and amazing trip I have done to date, and coming from a well-seasoned
+              traveler this is saying a lot!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quo consequatur itaque ratione tenetur
+              suscipit dolor modi atque sed rem!
+              <br>
+              <br>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum ipsum sed ab ex veritatis esse error
+              possimus nisi numquam harum nihil fugit tenetur, similique expedita nobis eius non dignissimos incidunt
+              rem deserunt laborum, dolorem aut earum quibusdam. Iure, minus nam.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer--body">
+          <div class="footer--top ft">
+            <div class="ft--left-item fli ft--items">
+              <a href="#s-hero" class="fli--logo">
+                <!--START BLOCK HeaderLogo-->
+                <img src="img/logo.svg" alt="{HeaderName-Seitename}" class="logo--icon">
+                <!--END BLOCK HeaderLogo-->
+
+                <!--START BLOCK HeaderName-->
+                <div class="logo--text fli--logo-text">Gallery</div>
+                <!--END BLOCK HeaderName-->
+              </a>
+              <div class="fli--address">Nuernbergerstrasse 173a</div>
+              <div class="fli--phone">
+                <span class="fli--phone-title">Phone:</span>
+                <span class="fli--phone-text fli--text">05066470941</span>
+              </div>
+              <div class="fli--mail">
+                <span class="fli--mail-title ">Email:</span>
+                <span class="fli--phone-text fli--text">jacquelinek@mailgen.fun</span>
+              </div>
+              <div class="fli--social">
+                <a href="#" class="fli--social-item">
+                  <i class="icon-twitter"></i>
+                </a>
+                <a href="#" class="fli--social-item">
+                  <i class="icon-facebook"></i>
+                </a>
+                <a href="#" class="fli--social-item">
+                  <i class="icon-instagramm"></i>
+                </a>
+                <a href="#" class="fli--social-item">
+                  <i class="icon-linkedin"></i>
+                </a>
+              </div>
+            </div>
+            <div class="ft--center-item fci ft--items">
+              <ul class="fci--list">
+                <a href="#s-hero" class="fci--link"><i class="fa-solid fa-angle-right"></i><span>Home</span></a>
+
+                <!--START BLOCK Gallery-->
+                <a href="#s-about" class="fci--link"><i class="fa-solid fa-angle-right"></i><span>Gallery</span></a>
+                <!-- END BLOCK Gallery-->
+
+                <!--START BLOCK Tour-->
+                <a href="#s-tour" class="fci--link"><i class="fa-solid fa-angle-right"></i><span>Tours</span></a>
+                <!-- END BLOCK Tour-->
+
+                <!--START BLOCK Information-->
+                <a href="#s-information" class="fci--link"><i class="fa-solid fa-angle-right"></i><span>Info</span></a>
+                <!-- END BLOCK Information-->
+
+                <!--START BLOCK Aboutus-->
+                <a href="#s-aboutus" class="fci--link"><i class="fa-solid fa-angle-right"></i><span>About</span></a>
+                <!-- END BLOCK Aboutus-->
+
+                <!--START BLOCK Impressum-->
+                <a href="impressum.html" class="fci--link"><i class="fa-solid fa-angle-right"></i><span>Impressum und
+                    Datenschutzerklärung</span></a>
+                <!-- END BLOCK Impressum-->
+              </ul>
+            </div>
+            <!-- <div class="ft--right-item fri ft--items">
+              <h4 class="fri--title">Abo</h4>
+              <div class="fri--text">{Footer-Text}</div>
+            </div> -->
+          </div>
+          <div class="footer--bottom fb">
+            <div class="fb--text">
+              Deine Webseite - All Rights Reserved
+            </div>
+          </div>
+        </div>
+    </footer>
+  </div>
+
+  <script src="libs/aos/aos.js"></script>
+  <!-- API збільшення зображення при відкриванні-->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <!-- End -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script src="js/scripts.min.js"></script>
+
+  <!-- API для загрузки відео з ютуб на фон-->
+  <script type="text/javascript" src="libs/YTPlayer/dist/jquery.mb.YTPlayer.min.js"></script>
+  <!-- End -->
+
+  <script>
+    AOS.init({
+      // Global settings:
+      disable: 'mobile',
+      once: true,
+      duration: 1000,
+      delay: 100,
+      anchorPlacement: 'top'
+    });
+  </script>
+
+</body>
+
+</html>

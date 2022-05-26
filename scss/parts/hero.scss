@@ -1,0 +1,72 @@
+.hero {
+  position: relative;
+  padding-top: 134px;
+  padding-bottom: 40px;
+  min-height: 100vh;
+  background-blend-mode: multiply;
+
+  // .hero__body
+
+  &__body {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  // .hero__content
+
+  &__content {
+    max-width: 591px;
+    padding: 40px;
+    position: relative;
+    color: $white;
+
+    border: 4px solid $white;
+  }
+
+  // .hero__title
+
+  &__title {
+    font-family: 'Black Han Sans';
+    font-weight: 400;
+    font-size: 96px;
+  }
+
+  // .hero__descr
+
+  &__descr {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 30px;
+  }
+}
+
+.load {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  align-self: center;
+  justify-self: center;
+  left: 50%;
+}
+
+.YTPOverlay {
+  position: relative;
+
+  &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.playerBox {
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+}
